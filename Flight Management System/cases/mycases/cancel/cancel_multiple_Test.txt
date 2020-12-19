@@ -1,0 +1,55 @@
+# xuweic
+create xuweic xuweic 100000
+login xuweic xuweic
+search "Seattle WA" "Boise ID" 1 1 10
+book 0
+book 1
+book 2
+search "Seattle WA" "Boise ID" 1 2 1
+book 0
+reservations
+cancel 1
+cancel 100
+cancel 2
+quit
+*
+#
+# expected printouts for user 1
+#
+Created user xuweic
+Logged in as xuweic
+Itinerary 0: 1 flight(s), 68 minutes
+ID: 60609 Day: 1 Carrier: AS Number: 29 Origin: Seattle WA Dest: Boise ID Duration: 68 Capacity: 15 Price: 360
+Itinerary 1: 1 flight(s), 68 minutes
+ID: 541808 Day: 1 Carrier: WN Number: 2200 Origin: Seattle WA Dest: Boise ID Duration: 68 Capacity: 9 Price: 716
+Itinerary 2: 1 flight(s), 69 minutes
+ID: 541806 Day: 1 Carrier: WN Number: 1378 Origin: Seattle WA Dest: Boise ID Duration: 69 Capacity: 10 Price: 958
+Itinerary 3: 1 flight(s), 74 minutes
+ID: 65543 Day: 1 Carrier: AS Number: 186 Origin: Seattle WA Dest: Boise ID Duration: 74 Capacity: 19 Price: 221
+Itinerary 4: 1 flight(s), 77 minutes
+ID: 67805 Day: 1 Carrier: AS Number: 355 Origin: Seattle WA Dest: Boise ID Duration: 77 Capacity: 18 Price: 900
+Itinerary 5: 1 flight(s), 77 minutes
+ID: 949416 Day: 1 Carrier: OO Number: 4581 Origin: Seattle WA Dest: Boise ID Duration: 77 Capacity: 2 Price: 602
+Itinerary 6: 1 flight(s), 77 minutes
+ID: 951216 Day: 1 Carrier: OO Number: 4600 Origin: Seattle WA Dest: Boise ID Duration: 77 Capacity: 11 Price: 838
+Itinerary 7: 1 flight(s), 79 minutes
+ID: 937015 Day: 1 Carrier: OO Number: 3428 Origin: Seattle WA Dest: Boise ID Duration: 79 Capacity: 13 Price: 587
+Itinerary 8: 1 flight(s), 81 minutes
+ID: 942224 Day: 1 Carrier: OO Number: 4505 Origin: Seattle WA Dest: Boise ID Duration: 81 Capacity: 13 Price: 718
+Itinerary 9: 1 flight(s), 87 minutes
+ID: 541807 Day: 1 Carrier: WN Number: 1471 Origin: Seattle WA Dest: Boise ID Duration: 87 Capacity: 18 Price: 734
+Booked flight(s), reservation ID: 1
+You cannot book two flights in the same day
+You cannot book two flights in the same day
+Itinerary 0: 1 flight(s), 70 minutes
+ID: 67806 Day: 2 Carrier: AS Number: 355 Origin: Seattle WA Dest: Boise ID Duration: 70 Capacity: 13 Price: 722
+Booked flight(s), reservation ID: 2
+Reservation 1 paid: false:
+ID: 60609 Day: 1 Carrier: AS Number: 29 Origin: Seattle WA Dest: Boise ID Duration: 68 Capacity: 15 Price: 360
+Reservation 2 paid: false:
+ID: 67806 Day: 2 Carrier: AS Number: 355 Origin: Seattle WA Dest: Boise ID Duration: 70 Capacity: 13 Price: 722
+Canceled reservation 1
+Failed to cancel reservation 100
+Canceled reservation 2
+Goodbye
+*

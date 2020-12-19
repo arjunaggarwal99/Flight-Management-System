@@ -1,0 +1,10 @@
+# user is trying to test whether 0 is going to give a bug
+search "Seattle" "Boise ID" 1 0 1
+quit
+*
+#
+# expected printouts for user 1
+#
+No flights match your selection
+Goodbye
+*

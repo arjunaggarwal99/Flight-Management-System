@@ -1,0 +1,21 @@
+# user 1's commands
+create xuweic xuweic 10000
+login xuweic xuweic
+quit
+*
+#
+# expected printouts for user 1
+#
+Created user xuweic
+Logged in as xuweic
+Goodbye
+#
+*  # user 2's commands
+create chenxu chenxu 10000
+login chenxu forgetpassword
+quit
+*  # user 2's expected printouts
+Created user chenxu
+Login failed
+Goodbye
+*

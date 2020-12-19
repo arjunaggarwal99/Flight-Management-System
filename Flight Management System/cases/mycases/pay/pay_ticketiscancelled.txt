@@ -1,0 +1,21 @@
+# the user is trying to pay for reservation that has been cancelled
+create xuweic xuweic 1000
+login xuweic xuweic
+search "Seattle WA" "Boise ID" 1 1 1
+book 0
+cancel 1
+pay 1
+quit
+*
+#
+# expected printouts for user 1
+#
+Created user xuweic
+Logged in as xuweic
+Itinerary 0: 1 flight(s), 68 minutes
+ID: 60609 Day: 1 Carrier: AS Number: 29 Origin: Seattle WA Dest: Boise ID Duration: 68 Capacity: 15 Price: 360
+Booked flight(s), reservation ID: 1
+Canceled reservation 1
+Failed to pay for reservation 1
+Goodbye
+*

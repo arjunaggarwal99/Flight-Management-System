@@ -1,0 +1,74 @@
+# Trying to show reservations when two users book for the same flights
+# One of them should succeed and the other should fail.
+#
+# user 1
+create xuweic xuweic 10000
+login xuweic xuweic
+search "Seattle WA" "Boise ID" 0 1 1
+book 0
+reservations
+quit
+*
+#
+# expected printouts for user 1
+#
+#
+#
+Created user xuweic
+Logged in as xuweic
+Itinerary 0: 1 flight(s), 68 minutes
+ID: 60609 Day: 1 Carrier: AS Number: 29 Origin: Seattle WA Dest: Boise ID Duration: 68 Capacity: 15 Price: 360
+Booked flight(s), reservation ID: 1
+Reservation 1 paid: false:
+ID: 60609 Day: 1 Carrier: AS Number: 29 Origin: Seattle WA Dest: Boise ID Duration: 68 Capacity: 15 Price: 360
+Goodbye
+#
+|  # "|" denotes an alternate outcome scenario
+#
+# second scenario: user 1 fails in booking and user 2 succeeds
+#
+Created user xuweic
+Logged in as xuweic
+Itinerary 0: 1 flight(s), 68 minutes
+ID: 60609 Day: 1 Carrier: AS Number: 29 Origin: Seattle WA Dest: Boise ID Duration: 68 Capacity: 15 Price: 360
+Booked flight(s), reservation ID: 2
+Reservation 2 paid: false:
+ID: 60609 Day: 1 Carrier: AS Number: 29 Origin: Seattle WA Dest: Boise ID Duration: 68 Capacity: 15 Price: 360
+Goodbye
+#
+*
+#
+# similarly for user 2
+#
+create chenxu chenxu 10000
+login chenxu chenxu
+search "Seattle WA" "Boise ID" 0 1 1
+book 0
+reservations
+quit
+*
+#
+# first scenario: user 1 succeeds in booking and user 2 fails
+#
+Created user chenxu
+Logged in as chenxu
+Itinerary 0: 1 flight(s), 68 minutes
+ID: 60609 Day: 1 Carrier: AS Number: 29 Origin: Seattle WA Dest: Boise ID Duration: 68 Capacity: 15 Price: 360
+Booked flight(s), reservation ID: 2
+Reservation 2 paid: false:
+ID: 60609 Day: 1 Carrier: AS Number: 29 Origin: Seattle WA Dest: Boise ID Duration: 68 Capacity: 15 Price: 360
+Goodbye
+#
+|
+#
+# second scenario: user 1 fails in booking and user 2 succeeds
+#
+Created user chenxu
+Logged in as chenxu
+Itinerary 0: 1 flight(s), 68 minutes
+ID: 60609 Day: 1 Carrier: AS Number: 29 Origin: Seattle WA Dest: Boise ID Duration: 68 Capacity: 15 Price: 360
+Booked flight(s), reservation ID: 1
+Reservation 1 paid: false:
+ID: 60609 Day: 1 Carrier: AS Number: 29 Origin: Seattle WA Dest: Boise ID Duration: 68 Capacity: 15 Price: 360
+Goodbye
+*

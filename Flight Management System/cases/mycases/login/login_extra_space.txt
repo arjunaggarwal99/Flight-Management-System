@@ -1,0 +1,13 @@
+# user 1
+#
+create xuwei xuwei 100
+login "xuwei " xuwei
+quit
+*
+#
+# expected printouts for user 1
+#
+Created user xuwei
+Logged in as xuwei 
+Goodbye
+*

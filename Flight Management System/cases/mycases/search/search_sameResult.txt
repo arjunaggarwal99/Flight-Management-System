@@ -1,0 +1,37 @@
+# should return exactly same output
+# user 1
+search "Seattle WA" "Boise ID" 1 1 1
+create xuweic xuweic 100000
+login xuweic xuweic
+search "Seattle WA" "Boise ID" 1 1 1
+quit
+*
+#
+# expected printouts for user 1
+#
+Itinerary 0: 1 flight(s), 68 minutes
+ID: 60609 Day: 1 Carrier: AS Number: 29 Origin: Seattle WA Dest: Boise ID Duration: 68 Capacity: 15 Price: 360
+Created user xuweic
+Logged in as xuweic
+Itinerary 0: 1 flight(s), 68 minutes
+ID: 60609 Day: 1 Carrier: AS Number: 29 Origin: Seattle WA Dest: Boise ID Duration: 68 Capacity: 15 Price: 360
+Goodbye
+*
+# user 2
+search "Seattle WA" "Boise ID" 1 1 1
+create chenxu chenxu 100000
+login chenxu chenxu
+search "Seattle WA" "Boise ID" 1 1 1
+quit
+*
+#
+# expected printouts for user 1
+#
+Itinerary 0: 1 flight(s), 68 minutes
+ID: 60609 Day: 1 Carrier: AS Number: 29 Origin: Seattle WA Dest: Boise ID Duration: 68 Capacity: 15 Price: 360
+Created user chenxu
+Logged in as chenxu
+Itinerary 0: 1 flight(s), 68 minutes
+ID: 60609 Day: 1 Carrier: AS Number: 29 Origin: Seattle WA Dest: Boise ID Duration: 68 Capacity: 15 Price: 360
+Goodbye
+*

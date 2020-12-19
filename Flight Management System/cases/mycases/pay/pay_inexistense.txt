@@ -1,0 +1,26 @@
+# pay for inexist reservationId
+create xuweic xuweic 10000
+login xuweic xuweic
+search "Seattle WA" "Boise ID" 1 1 1
+book 0
+pay 100
+quit
+*
+Created user xuweic
+Logged in as xuweic
+Itinerary 0: 1 flight(s), 68 minutes
+ID: 60609 Day: 1 Carrier: AS Number: 29 Origin: Seattle WA Dest: Boise ID Duration: 68 Capacity: 15 Price: 360
+Booked flight(s), reservation ID: 1
+Cannot find unpaid reservation 100 under user: xuweic
+Goodbye
+*
+create chenxu chenxu 1000
+login chenxu chenxu
+pay 1
+quit
+*
+Created user chenxu
+Logged in as chenxu
+Cannot find unpaid reservation 1 under user: chenxu
+Goodbye
+*

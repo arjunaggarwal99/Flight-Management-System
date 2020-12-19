@@ -1,0 +1,21 @@
+# Tests 2 terminals trying to create an account with the same username
+# One should succeed, the other should succeed
+#
+# Terminal 1
+create xuweic xuweic 1000
+quit
+*
+# expected result for Terminal 1
+# scenario 1: Terminal 1 succeeds, Terminal 2 succeedds
+Created user xuweic
+Goodbye
+*
+# Terminal 2
+create chenxu chenxu 1000
+quit
+*
+# expected result for Terminal 2
+# scenario 1: Terminal 1 succeeds, Terminal 2 fails
+Created user chenxu
+Goodbye
+*

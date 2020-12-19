@@ -1,0 +1,10 @@
+# reservations without logging in
+reservations
+quit
+*
+#
+# expected printouts
+#
+Cannot view reservations, not logged in
+Goodbye
+*

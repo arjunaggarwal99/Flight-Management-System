@@ -1,0 +1,11 @@
+# a series of creates
+# create a single user with sql code
+create xuweic xuweic 100
+create chenxu chenxu 10000
+create tfboys tfboys 100
+*
+#
+Created user xuweic
+Created user chenxu
+Created user tfboys
+*
